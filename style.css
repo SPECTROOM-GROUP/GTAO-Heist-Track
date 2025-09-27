@@ -1,0 +1,227 @@
+:root {
+    --primary-bg: #101116;
+    --secondary-bg: #1a1b20;
+    --card-bg: #1f2025;
+    --border-color: #3a3d4a;
+    --primary-text: #e1e3e8;
+    --accent-color-red: #d90429;
+    --accent-color-blue: #0d6efd;
+    --input-bg: #2a2c33;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Roboto Condensed', sans-serif;
+    background-color: var(--primary-bg);
+    color: var(--primary-text);
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.app-header {
+    background-color: var(--secondary-bg);
+    padding: 1rem 0;
+    border-bottom: 3px solid var(--accent-color-blue);
+}
+
+.app-header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+}
+
+.logo-svg {
+    width: 60px;
+    height: auto;
+    margin-right: 15px;
+}
+
+.logo {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 2.2rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: var(--primary-text);
+}
+
+.logo-accent {
+    color: var(--accent-color-blue);
+}
+
+.main-nav .nav-link {
+    color: var(--primary-text);
+    text-decoration: none;
+    margin-left: 25px;
+    font-size: 1.1rem;
+    padding-bottom: 5px;
+    border-bottom: 2px solid transparent;
+    transition: color 0.3s, border-color 0.3s;
+}
+
+.main-nav .nav-link.active,
+.main-nav .nav-link:hover {
+    color: var(--accent-color-blue);
+    border-bottom-color: var(--accent-color-blue);
+}
+
+#app {
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+
+.card {
+    background-color: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 25px;
+    margin-bottom: 30px;
+}
+
+.card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+    border-bottom: 1px solid var(--border-color);
+    padding-bottom: 15px;
+}
+
+.card-header h2 {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 1.8rem;
+    color: var(--primary-text);
+}
+
+.card-header .form-group {
+    margin-bottom: 0;
+    min-width: 300px;
+}
+
+.form-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 700;
+    font-size: 1rem;
+    text-transform: uppercase;
+    color: #a0a3ab;
+}
+
+.form-control {
+    width: 100%;
+    padding: 12px;
+    background-color: var(--input-bg);
+    border: 1px solid var(--border-color);
+    color: var(--primary-text);
+    border-radius: 5px;
+    font-size: 1rem;
+    font-family: 'Roboto Condensed', sans-serif;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.form-control:focus {
+    outline: none;
+    border-color: var(--accent-color-blue);
+    box-shadow: 0 0 8px rgba(13, 110, 253, 0.5);
+}
+
+.secondary-targets {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+}
+
+.secondary-targets .target-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: var(--input-bg);
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+.secondary-targets .target-item span {
+    flex-grow: 1;
+}
+
+.secondary-targets .target-item input {
+    width: 80px;
+    margin-left: 10px;
+    text-align: center;
+}
+
+.heist-options.hidden {
+    display: none;
+}
+
+#player-cuts-container .form-grid {
+    margin-top: 15px;
+}
+
+.result-card {
+    margin-top: 30px;
+    padding: 20px;
+    background-color: var(--secondary-bg);
+    border-radius: 8px;
+    border-left: 5px solid var(--accent-color-blue);
+}
+
+.result-card h3 {
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+    font-family: 'Orbitron', sans-serif;
+}
+
+.result-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    text-align: center;
+}
+
+.result-item {
+    background: var(--card-bg);
+    padding: 15px;
+    border-radius: 5px;
+}
+
+.result-item .label {
+    font-size: 1rem;
+    color: #a0a3ab;
+    margin-bottom: 5px;
+}
+
+.result-item .value {
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+.result-item .value.player-share,
+.result-item .value.final-payout {
+    color: var(--accent-color-blue);
+}
