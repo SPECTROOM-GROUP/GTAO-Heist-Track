@@ -224,4 +224,5 @@ body {
 .result-item .value.player-share,
 .result-item .value.final-payout {
     color: var(--accent-color-blue);
+
 }
